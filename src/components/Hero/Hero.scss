@@ -1,0 +1,27 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.hero {
+  &__container {
+    background-color: #000000;
+    text-align: center;
+  }
+
+  &__video {
+    aspect-ratio: 1.8;
+    width: 100%;
+  }
+
+  @include tablet {
+    &__video {
+      width: 90%;
+    }
+  }
+
+  @include desktop {
+    &__video {
+      max-width: 1024px;
+      margin: auto;
+    }
+  }
+}

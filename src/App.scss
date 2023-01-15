@@ -1,0 +1,42 @@
+@use "./styles/partials/reset";
+@use "./styles/partials/variable" as *;
+@use "./styles/partials/mixins" as *;
+
+.next-video__header {
+  color: $tridary-color;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: 1.6rem;
+
+  @include tablet {
+    margin: 3.6rem;
+  }
+
+  @include desktop {
+    margin: 1.6rem;
+  }
+}
+
+.main {
+  &__section {
+    margin: auto;
+  }
+  @include desktop {
+    &__container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1024px;
+      margin: auto;
+    }
+
+    &__next-video--section {
+      width: 45%;
+      border-left: 1px solid $mercury;
+    }
+
+    &__section {
+      margin: 0;
+      width: 80%;
+    }
+  }
+}

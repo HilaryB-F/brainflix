@@ -1,0 +1,111 @@
+@use "../../styles/partials/variable" as *;
+@use "../../styles/partials/mixins" as *;
+
+.about {
+  &__title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: bold;
+    margin: 1.6rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1.6rem;
+    border-top: 1px solid $mercury;
+    border-bottom: 1px solid $mercury;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      font-weight: bold;
+    }
+
+    &-timestamp {
+      color: $tridary-color;
+    }
+
+    &-description {
+      margin: 1.6rem;
+      font-size:1.3rem;
+    }
+  }
+
+  &__icons {
+    color: $tridary-color;
+    display: flex;
+    flex-direction: column;
+
+    &--icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &--img {
+        margin-right: 1rem;
+        max-height: 2rem;
+      }
+    }
+  }
+
+  @include tablet {
+    &__title {
+      font-size: 3.3rem;
+      margin: 3.6rem;
+      margin-bottom: 0;
+    }
+
+    &__container {
+      border-top: none;
+      margin: 3.6rem;
+      margin-top: 0;
+      flex-direction: row;
+    }
+
+    &__info {
+      flex-direction: row;
+      width: 25%;
+      justify-content: space-between;
+
+      &-title{
+        font-size: 1.4rem;
+      }
+      &-timestamp{
+        font-size: 1.4rem;
+
+      }
+      &-description {
+        margin: 3.6rem;
+        font-size: 1.4rem;
+
+      }
+    }
+
+    &__icons {
+      flex-direction: row;
+      width: 30%;
+      justify-content: space-between;
+      font-size: 1.4rem;
+
+
+      &--icon-like {
+        margin-right: 1.6rem;
+      }
+    }
+  }
+
+  @include desktop {
+    &__container {
+      margin-right: 0;
+    }
+
+    &__icons {
+      margin-right: 1.6rem;
+    }
+  }
+}

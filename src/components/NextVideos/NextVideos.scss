@@ -1,0 +1,64 @@
+@use "../../styles/partials/variable" as *;
+@use "../../styles/partials/mixins" as *;
+
+.next-video {
+  &__container {
+    display: flex;
+    margin: 1.6rem;
+  }
+
+  &__thumbnail {
+    width: 30%;
+    max-height: 10%;
+    aspect-ratio: 1.8;
+    border-radius: 4px;
+    background-color: $mercury;
+    margin-right: 1.6rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: black;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__name {
+    margin-top: 1.6;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+  }
+
+  @include tablet {
+    &__container {
+      width: 50%;
+      margin: 3.6rem;
+    }
+    &__title {
+      font-size: 1.4rem;
+    }
+
+    &__name {
+      font-size: 1.4rem;
+    }
+  }
+
+  @include desktop {
+    &__container {
+      width: auto;
+      margin: 1.6rem;
+    }
+  }
+}
