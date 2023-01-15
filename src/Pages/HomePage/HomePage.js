@@ -15,22 +15,30 @@ export default function HomePage() {
   let id = videoId || "84e96018-4022-434e-80bf-000ce4cd12b8";
 
   useEffect(() => {
-    const getVideos = async () => {
-      const { data } = await axios.get(
-        ` https://project-2-api.herokuapp.com/videos/${id}?api_key=da4c65a4-16d5-49fa-b670-f34461b66cfd`
-      );
-      setCurrentVid(data);
-    };
+    async function getVideos() {
+      try {
+        const { data } = await axios.get(
+          ` https://project-2-api.herokuapp.com/videos/${id}?api_key=da4c65a4-16d5-49fa-b670-f34461b66cfd`
+        );
+        setCurrentVid(data);
+      } catch (error) {
+        console.log(error, "Error");
+      }
+    }
     getVideos();
   }, [id]);
 
   useEffect(() => {
-    const getNextVideos = async () => {
-      const { data } = await axios.get(
-        ` https://project-2-api.herokuapp.com/videos?api_key=da4c65a4-16d5-49fa-b670-f34461b66cfd`
-      );
-      setNextVideo(data);
-    };
+    async function getNextVideos() {
+      try {
+        const { data } = await axios.get(
+          ` https://project-2-api.herokuapp.com/videos?api_key=da4c65a4-16d5-49fa-b670-f34461b66cfd`
+        );
+        setNextVideo(data);
+      } catch (error) {
+        console.log(error, "Error");
+      }
+    }
     getNextVideos();
   }, []);
 
@@ -39,7 +47,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className = "main">
+    <div className="main">
       <Header />
       {currentVid && <Hero currentVid={currentVid} />}
       <div className="main__container">
@@ -59,6 +67,6 @@ export default function HomePage() {
           {currentVid && <NextVideos nextVideo={nextVideo} videoId={videoId} />}
         </div>
       </div>
-      </div>
+    </div>
   );
 }
