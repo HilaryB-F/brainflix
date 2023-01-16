@@ -1,7 +1,7 @@
 import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Upload from "./pages/Upload/Upload";
-import HomePage from "./pages/HomePage/HomePage";
+import Upload from "./Pages/Upload/Upload";
+import HomePage from "./Pages/HomePage/HomePage";
 
 const App = () => {
   return (
