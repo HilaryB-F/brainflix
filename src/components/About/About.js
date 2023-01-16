@@ -3,8 +3,6 @@ import LikeIcon from "../../assets/images/icons/Icons/likes.svg";
 import ViewIcon from "../../assets/images/icons/Icons/views.svg";
 
 export default function About(props) {
-
-
   return (
     <div>
       <h1 className="about__title">{props.currentVid.title}</h1>
@@ -19,7 +17,7 @@ export default function About(props) {
           <div className="about__icons--icon">
             <img
               className="about__icons--icon--img"
-              src= {ViewIcon}
+              src={ViewIcon}
               alt="Eye to represent it has been seen"
             ></img>
             <p>{props.currentVid.views}</p>
@@ -37,5 +35,4 @@ export default function About(props) {
       <p className="about__info-description">{props.currentVid.description}</p>
     </div>
   );
-  }
-
+}

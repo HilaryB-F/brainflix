@@ -9,7 +9,7 @@ export default function Header() {
       <Link to="/">
         <img className="brainflix__logo" src={Logo} alt="Brainflix Logo"></img>
       </Link>
-      <div className = "header__nav-container">
+      <div className="header__nav-container">
         <nav className="header__nav">
           <input
             className="header__nav-search"

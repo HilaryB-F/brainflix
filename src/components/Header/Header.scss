@@ -20,12 +20,11 @@
     &-upload {
       color: #ffffff;
       text-decoration: none;
-     
 
       &-tablet {
         display: none;
       }
-  
+
       background-color: $secondary-color;
       background-image: url("../../assets/images/icons/Icons/upload.svg");
       background-repeat: no-repeat;
@@ -37,7 +36,7 @@
       // width: 90%;
       border-radius: 5px;
       padding: 1rem;
-      margin:1rem;
+      margin: 1rem;
       border: 2px solid $secondary-color;
 
       &-mobile {
@@ -45,9 +44,8 @@
         justify-content: space-around;
         margin-top: 1rem;
         margin-bottom: 1rem;
-        margin-left:0;
-        margin-right:0;
-        
+        margin-left: 0;
+        margin-right: 0;
       }
 
       &:hover {
