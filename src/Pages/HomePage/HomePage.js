@@ -7,6 +7,8 @@ import About from "../../components/About/About";
 import Comments from "../../components/Comments/Comments";
 import NextVideos from "../../components/NextVideos/NextVideos";
 
+document.title = "Home"
+
 export default function HomePage() {
   const [currentVid, setCurrentVid] = useState(null);
   const [nextVideo, setNextVideo] = useState([]);

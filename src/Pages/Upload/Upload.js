@@ -1,12 +1,19 @@
 import "./Upload.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import VideoImg from "../../assets/images/Upload-video-preview.jpg";
 
-function Publish() {
-  alert("Your video has been published");
-}
+
+
 export default function Upload() {
+  const navigate = useNavigate();
+
+  function handleOnSubmit(e) {
+    e.preventDefault();
+    alert("Your video has been published");
+    navigate("/");
+  }
+
   return (
     <div>
       <Header />
@@ -21,8 +28,8 @@ export default function Upload() {
               alt="Uploaded video preview"
             ></img>
           </div>
-          <form className="upload__form">
-            <label class="label__title">
+          <form className="upload__form" onSubmit={handleOnSubmit}>
+            <label className="label__title">
               TITLE YOUR VIDEO
               <input
                 className="upload__publish-title"
@@ -30,7 +37,7 @@ export default function Upload() {
                 placeholder="Add a title to your video"
               />
             </label>
-            <label class="label__description">
+            <label className="label__description">
               ADD A VIDEO DESCRIPTION
               <textarea
                 className="upload__publish-description"
@@ -39,12 +46,12 @@ export default function Upload() {
                 rows="5"
               ></textarea>
             </label>
+            <button type="submit" className="publish__button">
+              Publish
+            </button>
           </form>
         </div>
         <div className="publish">
-          <Link className="publish__button" to="/" onClick={Publish}>
-            Publish
-          </Link>
           <Link className="upload__cancel" to="/">
             {" "}
             Cancel

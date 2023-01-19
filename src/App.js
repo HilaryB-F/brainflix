@@ -5,15 +5,13 @@ import HomePage from "./Pages/HomePage/HomePage";
 
 const App = () => {
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />}></Route>
-          <Route path="/videoplayer/:videoId" element={<HomePage />}></Route>
-          <Route path="/upload" element={<Upload />}></Route>
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/videoplayer/:videoId" element={<HomePage />}></Route>
+        <Route path="/upload" element={<Upload />}></Route>
+      </Routes>
+    </Router>
   );
 };
 

@@ -5,7 +5,7 @@
   &__title {
     margin: 1.6rem;
     font-size: 2.4rem;
-    font-weight: bold;
+    font-weight: 700;
   }
   &__vid {
     display: flex;
@@ -22,7 +22,7 @@
       margin-bottom: 0.5rem;
       color: $tridary-color;
       font-size: 1.2rem;
-      font-weight: bold;
+      font-weight: 700;
     }
   }
   &__form {
@@ -69,6 +69,7 @@
     &__vid {
       &-title {
         font-size: 1.4rem;
+        line-height: 2.2rem;
       }
       &-img {
         width: 50%;

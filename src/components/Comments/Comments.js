@@ -3,12 +3,10 @@ import Icon from "../../assets/images/Mohan-muruge.jpg";
 import Comment from "../Comment/Comment";
 
 export default function Comments(props) {
-  // const commentLength = [Comment.length]
   return (
     <>
       <form className="comments__container">
-        {/* Will change to array.length when comment section is functional */}
-        <h3 className="comments__total">3 Comments</h3>
+        <h3 className="comments__total">{props.currentVid.comments.length} Comments</h3>
         <h3 className="comments__title">JOIN THE CONVERSATION</h3>
         <div className="comments__form">
           <img className="profile__icon" src={Icon} alt="Profile Icon"></img>
