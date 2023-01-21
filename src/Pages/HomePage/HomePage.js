@@ -20,7 +20,7 @@ export default function HomePage() {
     async function getVideos() {
       try {
         const { data } = await axios.get(
-          ` https://project-2-api.herokuapp.com/videos/${id}?api_key=da4c65a4-16d5-49fa-b670-f34461b66cfd`
+          ` http://localhost:8080/videoplayer/${id}`
         );
         setCurrentVid(data);
       } catch (error) {
@@ -34,7 +34,7 @@ export default function HomePage() {
     async function getNextVideos() {
       try {
         const { data } = await axios.get(
-          ` https://project-2-api.herokuapp.com/videos?api_key=da4c65a4-16d5-49fa-b670-f34461b66cfd`
+          ` http://localhost:8080/videoplayer`
         );
         setNextVideo(data);
       } catch (error) {
