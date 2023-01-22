@@ -14,8 +14,6 @@ export default function HomePage() {
   const { videoId } = useParams();
   let id = videoId || "84e96018-4022-434e-80bf-000ce4cd12b8";
 
-  // "84e96018-4022-434e-80bf-000ce4cd12b8"
-
   useEffect(() => {
     async function getVideos() {
       try {
