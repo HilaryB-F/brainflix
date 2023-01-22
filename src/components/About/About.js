@@ -2,15 +2,15 @@ import "./About.scss";
 import LikeIcon from "../../assets/images/icons/Icons/likes.svg";
 import ViewIcon from "../../assets/images/icons/Icons/views.svg";
 
-export default function About(props) {
+export default function About({currentVid}) {
   return (
     <div>
-      <h1 className="about__title">{props.currentVid.title}</h1>
+      <h1 className="about__title">{currentVid.title}</h1>
       <div className="about__container">
         <div className="about__info">
-          <p className="about__info-title">By {props.currentVid.channel}</p>
+          <p className="about__info-title">By {currentVid.channel}</p>
           <p className="about__info-timestamp">
-            {new Date(props.currentVid.timestamp).toLocaleDateString()}
+            {new Date(currentVid.timestamp).toLocaleDateString()}
           </p>
         </div>
         <div className="about__icons">
@@ -20,7 +20,7 @@ export default function About(props) {
               src={ViewIcon}
               alt="Eye to represent it has been seen"
             ></img>
-            <p>{props.currentVid.views}</p>
+            <p>{currentVid.views}</p>
           </div>
           <div className="about__icons--icon about__icon--icon-like">
             <img
@@ -28,11 +28,11 @@ export default function About(props) {
               src={LikeIcon}
               alt="Heart"
             ></img>
-            <p>{props.currentVid.likes}</p>
+            <p>{currentVid.likes}</p>
           </div>
         </div>
       </div>
-      <p className="about__info-description">{props.currentVid.description}</p>
+      <p className="about__info-description">{currentVid.description}</p>
     </div>
   );
 }

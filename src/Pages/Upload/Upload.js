@@ -19,6 +19,23 @@ export default function Upload() {
         image: "http://localhost:8080/upload-video-preview.jpg",
         likes: "3494721",
         views: "123423",
+        timestamp: 1654761223,
+        comments: [
+          {
+            "id": "6ff4314c-acde-4c91-a753-95cb7a366ee9",
+            "name": "Rick Astley",
+            "comment": "Never gonna give you up, never gonna let you down. Never gonna run around and desert you!",
+            "likes": 0,
+            "timestamp": 1632227521000
+          },
+          {
+            "id": "894b2ef9-640e-4d55-95ac-c65cfc39d693",
+            "name": "Aick Rstley",
+            "comment": "Never gonna make you cry, never gonna say goodbye. Never gonna tell a like and hurt you!",
+            "likes": 1,
+            "timestamp": 1631976360000
+          }
+        ]
       })
       
       .catch((error) => {
