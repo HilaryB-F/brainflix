@@ -1,18 +1,27 @@
 import "./Upload.scss";
+import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { useRef} from "react";
 import Header from "../../components/Header/Header";
 import VideoImg from "../../assets/images/Upload-video-preview.jpg";
 
-
-
 export default function Upload() {
-  const navigate = useNavigate();
+  const formRef = useRef();
+  const navigate = useNavigate()
 
-  function handleOnSubmit(e) {
-    e.preventDefault();
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    axios
+      .post("http://localhost:8080/videoplayer", {
+        title: formRef.current.title.value,
+        description: formRef.current.description.value,
+      })
+      .catch((error) => {
+        console.log(error.response.data, "Error");
+      });
     alert("Your video has been published");
-    navigate("/");
-  }
+    navigate("/")
+  };
 
   return (
     <div>
@@ -26,15 +35,17 @@ export default function Upload() {
               className="upload__vid-img"
               src={VideoImg}
               alt="Uploaded video preview"
+              name="image"
             ></img>
           </div>
-          <form className="upload__form" onSubmit={handleOnSubmit}>
+          <form className="upload__form" onSubmit={handleOnSubmit} ref={formRef}>
             <label className="label__title">
               TITLE YOUR VIDEO
               <input
                 className="upload__publish-title"
                 type="text"
                 placeholder="Add a title to your video"
+                id="title"
               />
             </label>
             <label className="label__description">
@@ -44,6 +55,7 @@ export default function Upload() {
                 placeholder="Add a description to your video"
                 cols="20"
                 rows="5"
+                id="description"
               ></textarea>
             </label>
             <button type="submit" className="publish__button">
