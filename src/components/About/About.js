@@ -2,7 +2,7 @@ import "./About.scss";
 import LikeIcon from "../../assets/images/icons/Icons/likes.svg";
 import ViewIcon from "../../assets/images/icons/Icons/views.svg";
 
-export default function About({currentVid}) {
+export default function About({ currentVid }) {
   return (
     <>
       <h1 className="about__title">{currentVid.title}</h1>

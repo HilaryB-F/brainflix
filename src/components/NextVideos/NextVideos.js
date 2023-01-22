@@ -1,7 +1,7 @@
 import "./NextVideos.scss";
 import { Link } from "react-router-dom";
 
-function NextVideos({nextVideo, videoId}) {
+function NextVideos({ nextVideo, videoId }) {
   let id = videoId;
 
   return (

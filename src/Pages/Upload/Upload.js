@@ -5,6 +5,7 @@ import { useRef } from "react";
 import Header from "../../components/Header/Header";
 import VideoImg from "../../assets/images/Upload-video-preview.jpg";
 
+
 export default function Upload() {
   const formRef = useRef();
   const navigate = useNavigate();
@@ -22,22 +23,24 @@ export default function Upload() {
         timestamp: 1654761223,
         comments: [
           {
-            "id": "6ff4314c-acde-4c91-a753-95cb7a366ee9",
-            "name": "Rick Astley",
-            "comment": "Never gonna give you up, never gonna let you down. Never gonna run around and desert you!",
-            "likes": 0,
-            "timestamp": 1632227521000
+            id: "6ff4314c-acde-4c91-a753-95cb7a366ee9",
+            name: "Lorem Ipsum",
+            comment:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            likes: 0,
+            timestamp: 1632227521000,
           },
           {
-            "id": "894b2ef9-640e-4d55-95ac-c65cfc39d693",
-            "name": "Aick Rstley",
-            "comment": "Never gonna make you cry, never gonna say goodbye. Never gonna tell a like and hurt you!",
-            "likes": 1,
-            "timestamp": 1631976360000
-          }
-        ]
+            id: "894b2ef9-640e-4d55-95ac-c65cfc39d693",
+            name: "Lorem Ipsum",
+            comment:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            likes: 1,
+            timestamp: 1631976360000,
+          },
+        ],
       })
-      
+
       .catch((error) => {
         console.log(error.response.data, "Error");
       });
@@ -46,12 +49,12 @@ export default function Upload() {
   };
 
   return (
-    <div>
+    <>
       <Header />
-      <div className="upload">
+      <main className="upload">
         <h1 className="upload__title"> Upload Video</h1>
-        <div className="upload__desktop">
-          <div className="upload__vid">
+        <section className="upload__desktop">
+          <section className="upload__vid">
             <h2 className="upload__vid-title">VIDEO THUMBNAIL</h2>
             <img
               className="upload__vid-img"
@@ -59,7 +62,7 @@ export default function Upload() {
               alt="Uploaded video preview"
               name="image"
             ></img>
-          </div>
+          </section>
           <form
             className="upload__form"
             onSubmit={handleOnSubmit}
@@ -84,18 +87,22 @@ export default function Upload() {
                 id="description"
               ></textarea>
             </label>
-            <button type="submit" className="publish__button">
-              Publish
-            </button>
+            <section className="upload__buttons">
+              <Link className="upload__cancel-tablet" to="/">
+                {" "}
+                CANCEL
+              </Link>
+              <button type="submit" className="publish__button">
+                Publish
+              </button>
+            </section>
           </form>
-        </div>
-        <div className="publish">
-          <Link className="upload__cancel" to="/">
-            {" "}
-            Cancel
-          </Link>
-        </div>
-      </div>
-    </div>
+        </section>
+        <Link className="upload__cancel" to="/">
+          {" "}
+          CANCEL
+        </Link>
+      </main>
+    </>
   );
 }
