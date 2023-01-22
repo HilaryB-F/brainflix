@@ -14,11 +14,13 @@ export default function HomePage() {
   const { videoId } = useParams();
   let id = videoId || "84e96018-4022-434e-80bf-000ce4cd12b8";
 
+  // "84e96018-4022-434e-80bf-000ce4cd12b8"
+
   useEffect(() => {
     async function getVideos() {
       try {
         const { data } = await axios.get(
-          ` https://project-2-api.herokuapp.com/videos/${id}?api_key=da4c65a4-16d5-49fa-b670-f34461b66cfd`
+          ` http://localhost:8080/videoplayer/${id}`
         );
         setCurrentVid(data);
       } catch (error) {
@@ -31,9 +33,7 @@ export default function HomePage() {
   useEffect(() => {
     async function getNextVideos() {
       try {
-        const { data } = await axios.get(
-          ` https://project-2-api.herokuapp.com/videos?api_key=da4c65a4-16d5-49fa-b670-f34461b66cfd`
-        );
+        const { data } = await axios.get(` http://localhost:8080/videoplayer`);
         setNextVideo(data);
       } catch (error) {
         console.log(error, "Error");
@@ -49,24 +49,20 @@ export default function HomePage() {
   return (
     <div className="main">
       <Header />
-      {currentVid && <Hero currentVid={currentVid} />}
-      <div className="main__container">
-        <div className="main__section">
-          {currentVid && (
-            <About className="main__about--section" currentVid={currentVid} />
-          )}
-          {currentVid && (
-            <Comments
-              className="main__comment--section"
-              currentVid={currentVid}
-            />
-          )}
-        </div>
-        <div className="main__next-video--section">
+      <Hero currentVid={currentVid} />
+      <main className="main__container">
+        <section className="main__section">
+          <About className="main__about--section" currentVid={currentVid} />
+          <Comments
+            className="main__comment--section"
+            currentVid={currentVid}
+          />
+        </section>
+        <section className="main__next-video--section">
           <h2 className="next-video__header">Next Videos</h2>
-          {currentVid && <NextVideos nextVideo={nextVideo} videoId={videoId} />}
-        </div>
-      </div>
+          <NextVideos nextVideo={nextVideo} videoId={id} />
+        </section>
+      </main>
     </div>
   );
 }

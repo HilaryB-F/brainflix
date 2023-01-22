@@ -5,7 +5,7 @@ import Icon from "../../assets/images/Mohan-muruge.jpg";
 
 export default function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <Link to="/">
         <img className="brainflix__logo" src={Logo} alt="Brainflix Logo"></img>
       </Link>
@@ -31,6 +31,6 @@ export default function Header() {
           UPLOAD
         </Link>
       </div>
-    </div>
+    </header>
   );
 }

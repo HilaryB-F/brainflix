@@ -5,8 +5,9 @@
   &__title {
     margin: 1.6rem;
     font-size: 2.4rem;
-    font-weight: bold;
+    font-weight: 700;
   }
+
   &__vid {
     display: flex;
     flex-direction: column;
@@ -22,9 +23,10 @@
       margin-bottom: 0.5rem;
       color: $tridary-color;
       font-size: 1.2rem;
-      font-weight: bold;
+      font-weight: 700;
     }
   }
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -39,6 +41,7 @@
       border: 1px solid #e1e1e1;
       border-radius: 4px;
     }
+
     &-description {
       font-size: 1.3rem;
       border-radius: 4px;
@@ -46,6 +49,7 @@
       font-family: "AvenirNextLTPro";
     }
   }
+
   &__cancel {
     text-decoration: none;
     color: $secondary-color;
@@ -54,8 +58,13 @@
     font-size: 1.3rem;
     font-weight: bold;
     display: flex;
-    margin: auto;
+    justify-content: center;
     padding: 1.6rem;
+
+    &-tablet {
+      @extend .upload__cancel;
+      display: none;
+    }
   }
 
   @include tablet {
@@ -66,16 +75,30 @@
       padding-bottom: 3.6rem;
       border-bottom: 1px solid $mercury;
     }
+
     &__vid {
       &-title {
         font-size: 1.4rem;
+        line-height: 2.2rem;
       }
       &-img {
         width: 50%;
       }
     }
+
     &__cancel {
       margin-right: 3.6rem;
+      display: none;
+
+      &-tablet {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 
@@ -85,19 +108,21 @@
     &__title {
       margin: 3.6rem;
     }
+
     &__desktop {
       display: flex;
-      padding-bottom: 1.6rem;
+      padding-bottom: 3.6rem;
       flex-direction: row;
       margin: 3.6rem;
-      border-bottom: 1px solid $mercury;
     }
+
     &__vid {
       width: 40%;
       &-img {
         width: 90%;
       }
     }
+
     &__publish {
       &-description {
         height: 10.5rem;
@@ -121,7 +146,22 @@
     margin-top: 0;
     margin-bottom: 1.6rem;
   }
+
+  @include tablet {
+    &__description {
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid $mercury;
+    }
+  }
+
+  @include desktop {
+    &__description {
+      // border-bottom:none;
+      padding-bottom: 3.6rem;
+    }
+  }
 }
+
 .publish {
   display: flex;
   flex-direction: column;
@@ -144,6 +184,11 @@
     margin: 1.6rem;
     width: 90%;
     border: 2px solid $secondary-color;
+
+    &:hover {
+      background-color: $hover;
+      border: 2px solid $hover;
+    }
   }
 
   @include tablet {
@@ -151,7 +196,8 @@
     justify-content: flex-end;
     &__button {
       width: 15rem;
-      order: 2;
+      // order: 2;
+      align-self: flex-end;
     }
   }
 

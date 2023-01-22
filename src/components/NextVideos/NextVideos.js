@@ -1,12 +1,12 @@
 import "./NextVideos.scss";
 import { Link } from "react-router-dom";
 
-function NextVideos(props) {
-  let id = props.videoId;
+function NextVideos({ nextVideo, videoId }) {
+  let id = videoId;
 
   return (
     <>
-      {props.nextVideo
+      {nextVideo
         .filter((upcomingVideo) => {
           return upcomingVideo.id !== id;
         })
@@ -18,18 +18,18 @@ function NextVideos(props) {
               key={upcomingVideo.id}
               className="next-video__link"
             >
-              <div className="next-video__container">
+              <main className="next-video__container">
                 <img
                   id={upcomingVideo.id}
                   className="next-video__thumbnail"
                   alt={upcomingVideo.title}
                   src={upcomingVideo.image}
                 />
-                <div className="next-video__info">
+                <section className="next-video__info">
                   <p className="next-video__title">{upcomingVideo.title}</p>
                   <p className="next-video__name">{upcomingVideo.channel}</p>
-                </div>
-              </div>
+                </section>
+              </main>
             </Link>
           );
         })}

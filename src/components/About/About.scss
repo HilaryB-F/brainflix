@@ -41,12 +41,12 @@
     display: flex;
     flex-direction: column;
 
-    &--icon {
+    &-icon {
       display: flex;
       flex-direction: row;
       align-items: center;
 
-      &--img {
+      &-img {
         margin-right: 1rem;
         max-height: 2rem;
       }
@@ -69,15 +69,17 @@
 
     &__info {
       flex-direction: row;
-      width: 25%;
+      width: 35%;
       justify-content: space-between;
 
       &-title {
         font-size: 1.4rem;
       }
+
       &-timestamp {
         font-size: 1.4rem;
       }
+      
       &-description {
         margin: 3.6rem;
         font-size: 1.4rem;
