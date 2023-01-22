@@ -1,13 +1,13 @@
 import "./Upload.scss";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { useRef} from "react";
+import { useRef } from "react";
 import Header from "../../components/Header/Header";
 import VideoImg from "../../assets/images/Upload-video-preview.jpg";
 
 export default function Upload() {
   const formRef = useRef();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
@@ -15,12 +15,17 @@ export default function Upload() {
       .post("http://localhost:8080/videoplayer", {
         title: formRef.current.title.value,
         description: formRef.current.description.value,
+        channel: "Flynn Rider",
+        image: "http://localhost:8080/upload-video-preview.jpg",
+        likes: "3494721",
+        views: "123423",
       })
+      
       .catch((error) => {
         console.log(error.response.data, "Error");
       });
     alert("Your video has been published");
-    navigate("/")
+    navigate("/");
   };
 
   return (
@@ -38,7 +43,11 @@ export default function Upload() {
               name="image"
             ></img>
           </div>
-          <form className="upload__form" onSubmit={handleOnSubmit} ref={formRef}>
+          <form
+            className="upload__form"
+            onSubmit={handleOnSubmit}
+            ref={formRef}
+          >
             <label className="label__title">
               TITLE YOUR VIDEO
               <input
