@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# BrainFlix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Netflix and Youtube combined!_
 
-## Available Scripts
+This was a 3 week sprint during my software engineering bootcamp, my first time using react! I loved working on this project as it showed me just how much there is in the sofware engineering world. 
 
-In the project directory, you can run:
+Although this is not a fully functional site, I learned so much. I fell in love with using React during this project. Everything fell into place while building this website, I learned about backend APIs, and about React Router. What I learned on this project will help me for the rest of my career. 
 
-### `npm start`
+During the second week, my computer crashed and I lost several days of hard work. I was devastated, but what I had spent several days doing I was able to redo within a few hours. Like I said, I learned alot during this project and the most important of all was that I knew what I was doing! How exciting is that!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Have a look at my BrainFlix project, it was a wild ride.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Installation 
+Install BrainFlix in few easy steps 
 
-### `npm test`
+1. Clone or download this repo 💫
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install the dependencies in your front-end 💫
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   Run `npm install` or `npm i` in your terminal
+   ```
+      $ cd {your directory name here}
+      $ npm install
+      ```
+      
+4. Start your app 🎉
+     ```
+      $ npm start
+    ```
+ #### Enjoy!
