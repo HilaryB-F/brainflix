@@ -15,7 +15,9 @@ Install BrainFlix in few easy steps
 
 1. Clone or download this repo 💫
 
-2. Install the dependencies in your front-end 💫
+2. Head over to the backend API [BrainFlix back-end](https://github.com/HilaryB-F/brainflix-api) 💫
+
+3. Install the dependencies in your front-end 💫
 
    Run `npm install` or `npm i` in your terminal
    ```
